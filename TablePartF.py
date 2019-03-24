@@ -12,7 +12,7 @@ table = conn.table('powers')
 
 row_num = 1
 while True:
-  row = table.row(encode('row'+str(row_num)))
+  row = table.row(('row'+str(row_num).encode())
   color = row[b'custom:color']
   name = row[b'professional:name']
   power = personal[b'personal:power']
