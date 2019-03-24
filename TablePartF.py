@@ -16,7 +16,7 @@ for key, data in table.scan():
     
 
 row_num = 1
-while row_num < rows:
+while row_num <= rows:
   row = 'row'+str(row_num)
   row = table.row(str.encode(row))
   color = row[b'custom:color']
@@ -24,7 +24,7 @@ while row_num < rows:
   power = row[b'personal:power']
   
   row_num1 = 1
-  while row_num1 < rows:
+  while row_num1 <= rows:
     row = 'row'+str(row_num1)
     row = table.row(str.encode(row))
     color1 = row[b'custom:color']
