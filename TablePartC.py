@@ -8,7 +8,7 @@ file_in = open('input.csv')
 for record in file_in:
         row = record.split(',')
         data = {
-                b'personal:hero' : str.(row[1]),
+                b'personal:hero' : str.encode(row[1]),
                 b'personal:power' : str.encode(row[2]),
                 b'professional:name' : str.encode(row[3]),
                 b'professional:xp' : str.encode(row[4]),
