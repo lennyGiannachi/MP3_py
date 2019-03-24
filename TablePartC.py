@@ -12,7 +12,7 @@ for record in file_in:
                 b'personal:power' : str.encode(row[2]),
                 b'professional:name' : str.encode(row[3]),
                 b'professional:xp' : str.encode(row[4]),
-                b'custom:color' : str.encode(row[5].strip('/r/n'))
+                b'custom:color' : str.encode(row[5].strip('\r\n'))
                }
         table.put(str.encode(row[0]), data)
 
