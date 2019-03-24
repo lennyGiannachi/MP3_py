@@ -21,9 +21,9 @@ while True:
   while True:
     row = 'row'+str(row_num1)
     row = table.row(str.encode(row))
-    color = row[b'custom:color']
-    name = row[b'professional:name']
-    power = row[b'personal:power']
+    color1 = row[b'custom:color']
+    name1 = row[b'professional:name']
+    power1 = row[b'personal:power']
     
     if color == color1 and name != name2:
       print('{}, {}, {}, {}, {}'.format(name, power, name1, power1, color))
