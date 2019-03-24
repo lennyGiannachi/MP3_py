@@ -25,7 +25,7 @@ while True:
     name1 = row[b'professional:name']
     power1 = row[b'personal:power']
     
-    if color == color1 and name != name2:
+    if color == color1 and name != name1:
       print('{}, {}, {}, {}, {}'.format(name, power, name1, power1, color))
     row_num1 += 1
   row_num += 1
