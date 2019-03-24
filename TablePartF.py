@@ -9,14 +9,20 @@ import happybase as hb
 
 conn = hb.Connection() 
 table = conn.table('powers') 
-rows = count(table)
-row_num = 0
+
+rows = 0
+for key, data in table.scan():
+  rows = rows + 1
+    
+
+row_num = 1
 while row_num < rows:
   row = 'row'+str(row_num)
   row = table.row(str.encode(row))
   color = row[b'custom:color']
   name = row[b'professional:name']
   power = row[b'personal:power']
+  
   row_num1 = 1
   while row_num1 < rows:
     row = 'row'+str(row_num1)
