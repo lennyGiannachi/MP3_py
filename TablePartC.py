@@ -5,15 +5,15 @@ conn = hb.Connection()
 table = conn.table('powers')
 row_num = 1
 file_in = open('input.csv')
-for record in file_in:
-        values = record.split(',')
+csv_reader = csv.reader(file_in, delimiter=',')
+for row in file_in:
         data = {
-                b'personal:hero' : values[1],
-                b'personal:power' : values[2],
-                b'professional:name' : values[3],
-                b'professional:xp' : values[4],
-                b'custom:color' : values[5]
+                b'personal:hero' : row[1],
+                b'personal:power' : row[2],
+                b'professional:name' : row[3],
+                b'professional:xp' : row[4],
+                b'custom:color' : row[5]
                }
-        table.put(values[0], data)
+        table.put(row[0], data)
 
 conn.close()
